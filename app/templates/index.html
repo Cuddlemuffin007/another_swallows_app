@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Favorite Swallows</title>
+</head>
+<body>
+<table style="margin: 2em auto; width: 60%;">
+    <tr>
+        <th style="text-align: left">Player Name</th>
+        <th style="text-align: left">AB</th>
+        <th style="text-align: left">H</th>
+        <th style="text-align: left">RBI</th>
+        <th style="text-align: left">HR</th>
+        <th style="text-align: left">R</th>
+        <th style="text-align: left">AVG</th>
+    </tr>
+{% for player in players %}
+    <tr>
+        <td><strong>{{ player.first_name.upper }} {{ player.last_name.upper }}</strong></td>
+        <td>{{ player.at_bats }}</td>
+        <td>{{ player.hits }}</td>
+        <td>{{ player.runs_batted }}</td>
+        <td>{{ player.homeruns }}</td>
+        <td>{{ player.runs }}</td>
+        <td>{{ player.batting_average }}</td>
+    </tr>
+{% endfor %}
+</table>
+</body>
+</html>
